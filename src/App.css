@@ -1,9 +1,9 @@
 body{
   color: #ffffff;
-  animation-name: anim;
-  animation-duration: 4s;
-  animation-iteration-count: infinite;
-  animation-direction: alternate-reverse;
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
 }
 
 h1{
@@ -16,7 +16,9 @@ h1{
 
 .gifs{
   padding: 20px;
+  margin-right: 20px;
   background-color: #3e065f00;
+  overflow: hidden;
 }
 
 .search{
@@ -24,11 +26,14 @@ h1{
   height: 20px;
 }
 
-
-@keyframes anim {
-  0%   {background-color: #000000;}
-  25%  {background-color: #3E065F;}
-  50%  {background-color: #700B97;}
-  75%  {background-color: #8E05C2;}
-  100% {background-color: #9A0680;}
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
